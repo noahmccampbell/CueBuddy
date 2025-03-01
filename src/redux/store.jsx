@@ -3,7 +3,8 @@ import { configureStore, createSlice } from '@reduxjs/toolkit';
 // Initial State
 const initialUserState = {
     username: '',
-    uid: ''
+    uid: '',
+    level: 0,
 };
 
 // User Slice
@@ -14,6 +15,7 @@ const userSlice = createSlice({
         setUser: (state, action) => {
             state.username = action.payload.username;
             state.uid = action.payload.uid;
+            state.level = action.payload.level;
         }
     }
 });
