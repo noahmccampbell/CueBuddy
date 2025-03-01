@@ -10,7 +10,7 @@ const lessons = [
 
 const LandingPage = () => {
   return (
-    <div className="landing-container w-full">
+    <div className="landing-container">
       <div className="typing-container">
         <p className="typing-text">Hello #username#!</p>
         <h1>Let's get started on today's lesson.</h1>
