@@ -22,13 +22,12 @@ const userSlice = createSlice({
 export const { setUser } = userSlice.actions;
 
 // Store
-const store = configureStore({
+export const store = configureStore({
     reducer: {
         user: userSlice.reducer
     }
 });
 
-export default store;
 // Export RootState and AppDispatch types
 export const RootState = store.getState;
 export const AppDispatch = store.dispatch;
