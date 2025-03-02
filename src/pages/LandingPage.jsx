@@ -1,30 +1,32 @@
 import React from "react";
 import "./LandingPage.css";
 
-const lessons = [
-  { id: 1, title: "Lesson 1" },
-  { id: 2, title: "Lesson 2" },
-  { id: 3, title: "Lesson 3" },
-  { id: 4, title: "Lesson 4" },
+const topics = [
+  { id: 1, title: "Topic 1" },
+  { id: 2, title: "Topic 2" },
+  { id: 3, title: "Topic 3" },
+  { id: 4, title: "Topic 4" },
+  { id: 5, title: "Topic 5" },
 ];
+
 
 const LandingPage = () => {
   return (
-    <div className="landing-container">
-      <div className="typing-container">
+    <div className="page-container">
+      <div className="section">
         <p className="typing-text">Hello #username#!</p>
-        <h1>Let's get started on today's lesson.</h1>
+        <h1>Let's get started on today's lesson :&#41;</h1>
+        <a href="#roadmap" className="scroll-down">↓ Scroll Down</a>
       </div>
-
-      <div className="roadmap">
-        {lessons.map((lesson, index) => (
-          <div key={lesson.id} className="lesson">
-            <div className="circle" onClick={() => alert(`Clicked ${lesson.title}`)}>
-              {lesson.id}
+      <div className="next-section">
+        {topics.map((topic, index) => (
+            <div key={topic.id} className="topic">
+              <div className="circle" onClick={() => alert(`Clicked ${topic.title}`)}>
+                {topic.id}
+              </div>
+              {index < topics.length - 1 && <div className="line"></div>}
             </div>
-            {index < lessons.length - 1 && <div className="line"></div>}
-          </div>
-        ))}
+          ))}
       </div>
     </div>
   );

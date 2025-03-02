@@ -29,7 +29,6 @@ const Header = () => {
             <a href="/" className="logo text-2xl font-quicksand font-bold text-white">
                 CueBuddy
             </a>
-
             <nav className="hidden md:block">
                 <ul className="flex justify-center">
                     <li>
