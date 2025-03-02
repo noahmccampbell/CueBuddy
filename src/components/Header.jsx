@@ -37,7 +37,7 @@ const Header = () => {
                         <a href="http://localhost:5174/landing">Home</a>
                     </li>
                     <li>
-                        <a href="http://localhost:5174/">Web</a>
+                        <a href="http://localhost:5174/">Lessons</a>
                     </li>
                 </ul>
             </nav>
