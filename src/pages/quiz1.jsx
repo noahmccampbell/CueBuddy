@@ -91,8 +91,7 @@ export default function quiz1() {
                         <h2>{questions[currentQuestion].question}</h2>
                         <img 
                             src={questions[currentQuestion].image} 
-                            alt="Question Image" 
-                            style={{ width: "300px", height: "auto", marginBottom: "10px" }}
+    
                         />
                         <div>
                         {questions[currentQuestion].answers.map((answer, index) => (
