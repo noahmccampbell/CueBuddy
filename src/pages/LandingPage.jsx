@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./LandingPage.css";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const topics = [
   { id: 1, title: "Topic 1", destination: "/lessons/lesson1" },
