@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./Lesson2.css";
+import "./quiz1.css";
 
-export default function Lesson2() {
+export default function quiz1() {
 
         const questions = [
             { 
