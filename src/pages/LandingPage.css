@@ -58,6 +58,7 @@ h1 {
   color: #0b0c0d;
   text-align: center;
   transition: opacity 0.5s ease-in-out;
+  margin-top: 20px;
 }
 
 .next-section {
@@ -99,4 +100,25 @@ h1 {
   width: 100px;
   height: 7px;
   background-color: #094381;
+}
+
+
+.subtopics {
+  display: block; /* Visible when the topic is clicked */
+  position: absolute;
+  top: 131%;
+  left: 21%;
+  background-color: #f1f1f1;
+  width: 10%;
+  border: 1px solid #ccc;
+  z-index: 1;
+}
+
+.subtopic {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.subtopic:hover {
+  background-color: #ddd;
 }
