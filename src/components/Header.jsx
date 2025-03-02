@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose} from "react-icons/ai";
+import { SlArrowDown } from "react-icons/sl";
 import "../App.css";
 import { useSelector } from "react-redux";
 /*
@@ -36,8 +37,9 @@ const Header = () => {
                     <li>
                         <a href="http://localhost:5174/landing">Home</a>
                     </li>
-                    <li>
-                        <a href="http://localhost:5174/">Lessons</a>
+                    <li className="grid grid-rows-1 grid-cols-2 flex items-center gap-2">
+                        <p className="text-lg">{user.username}</p>
+                        <SlArrowDown size={12}/>
                     </li>
                 </ul>
             </nav>
