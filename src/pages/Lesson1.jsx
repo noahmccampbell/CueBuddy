@@ -3,36 +3,76 @@ import "./Lesson1.css";
 
 const Lesson1 = () => {
   const flashcards = [
-    { type: "image", question: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fnz.pinterest.com%2Fpin%2Fhandsome-man-png-transparent-happy-smiling-face-portrait--591941944780681811%2F&psig=AOvVaw1dz7vHEB7I_zofBs2CrBUd&ust=1740969638052000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMiP38-v6osDFQAAAAAdAAAAABAI", answer: "Happy" },
-    { type: "image", question: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngtree.com%2Ffree-backgrounds-photos%2Fsad-face-woman&psig=AOvVaw25GrnnFP0Qlc4ov3hLqSPw&ust=1740969760401000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLijroyw6osDFQAAAAAdAAAAABAJ", answer: "Sad" },
+    { 
+      type: "image", 
+      question: "https://i.ytimg.com/vi/f8OmSWxF6h8/maxresdefault.jpg",  
+      answer: "Joy" 
+    },
+    { 
+      type: "image", 
+      question: "https://i.pinimg.com/736x/ca/ac/19/caac1988070f9e53ef31bfb900b352d6.jpg", 
+      answer: "Sadness" 
+    },
+    { 
+      type: "image", 
+      question: "https://img.freepik.com/premium-photo/angry-mad-face-asian-man-blue-t-shirt-isolated-wall_39688-4145.jpg", 
+      answer: "Anger" 
+    },
+    { 
+      type: "image", 
+      question: "https://www.shutterstock.com/image-photo/waistup-shot-freaked-out-scared-260nw-1315763924.jpg", 
+      answer: "Fear" 
+    },
+    { 
+      type: "image", 
+      question: "https://t4.ftcdn.net/jpg/01/22/33/55/360_F_122335513_GB4jSOLOix2BTYODKet4qWJH7AEaEszL.jpg",  
+      answer: "Joy" 
+    },
+    { 
+      type: "image", 
+      question: "https://d2thvodm3xyo6j.cloudfront.net/media/2020/10/ce51857598cc4658-600x338.jpg", 
+      answer: "Sadness" 
+    },
+    { 
+      type: "image", 
+      question: "https://www.shutterstock.com/shutterstock/videos/1103085867/thumb/1.jpg?ip=x480", 
+      answer: "Anger" 
+    },
+    { 
+      type: "image", 
+      question: "https://www.shutterstock.com/shutterstock/videos/27851020/thumb/3.jpg?ip=x480", 
+      answer: "Fear" 
+    }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
 
-  const nextCard = () => {
-    setFlipped(false); // Reset flip when moving to next card
+  const handleNextCard = () => {
+    setFlipped(false);
     setCurrentIndex((prevIndex) => (prevIndex + 1) % flashcards.length);
   };
 
   return (
     <div className="lesson-container">
-      <div
-        className={`flashcard ${flipped ? "flipped" : ""}`}
-        onClick={() => setFlipped(!flipped)}
-      >
+      <h1 className="lesson-title">Lesson 1: Emotions</h1>
+      <div className={`flashcard ${flipped ? "flipped" : ""}`} onClick={() => setFlipped(!flipped)}>
         <div className="front">
-          {flashcards[currentIndex].type === "text" ? (
-            <p>{flashcards[currentIndex].question}</p>
+          {flashcards[currentIndex].type === "image" ? (
+            <img 
+              src={flashcards[currentIndex].question} 
+              alt="Flashcard" 
+              className="flashcard-image"
+            />
           ) : (
-            <img src={flashcards[currentIndex].question} alt="Question" className="flashcard-image" />
+            <p className="flashcard-text">{flashcards[currentIndex].question}</p>
           )}
         </div>
         <div className="back">
-          <p>{flashcards[currentIndex].answer}</p>
+          <p className="flashcard-text">{flashcards[currentIndex].answer}</p>
         </div>
       </div>
-      <button className="next-button" onClick={nextCard}>Next</button>
+      <button className="next-button" onClick={handleNextCard}>Next</button>
     </div>
   );
 };
