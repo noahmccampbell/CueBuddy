@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./LoginPage.css";
-  
-  function Login() {
+import Login from "./Login";
+  function LoginPage() {
     const fullText = "Welcome to CueBuddy";
     const [displayText, setDisplayText] = useState("");
   
@@ -23,17 +23,20 @@ import "./LoginPage.css";
       <div className="login-container">
         <h1 className="typing-text">{displayText}</h1>
         <p>Your companion for learning social cues and improving communication.</p>
+        <Login>
         <a href="#" className="google-signin">
+          
           <img
             src="https://53.fs1.hubspotusercontent-na1.net/hub/53/hubfs/image8-2.jpg?width=600&name=image8-2.jpg"
             alt="Google Logo"
           />
           Sign in with Google
         </a>
+        </Login>
       </div>
     );
   }
   
-  export default Login;
+  export default LoginPage;
   
   

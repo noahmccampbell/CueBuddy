@@ -1,5 +1,6 @@
-import React from "react";
+import React, { use } from "react";
 import "./LandingPage.css";
+import { useSelector } from "react-redux";
 
 const topics = [
   { id: 1, title: "Topic 1" },
@@ -11,10 +12,12 @@ const topics = [
 
 
 const LandingPage = () => {
+  const username = useSelector((state) => state.user.username);
+
   return (
     <div className="page-container">
       <div className="section">
-        <p className="typing-text">Hello #username#!</p>
+        <p className="typing-text">Hello {(username != '') ? username : "Student"}!</p>
         <h1>Let's get started on today's lesson :&#41;</h1>
         <a href="#roadmap" className="scroll-down">↓ Scroll Down</a>
       </div>

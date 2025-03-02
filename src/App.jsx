@@ -7,13 +7,14 @@ import Lesson1 from './pages/Lesson1'
 import Lesson2 from './pages/Lesson2'
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Login from './pages/Login'
+import LoginPage from './pages/LoginPage'
 
 function App() {
 
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login/>} />
+        <Route path="/" element={<LoginPage/>} />
         <Route path="/landing" element={<LandingPage/>} />
         <Route path="/lesson1" element={<Lesson1 />} />
         <Route path="/lesson2" element={<Lesson2 />} />
