@@ -1,0 +1,52 @@
+.login-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #b1d3ea; /* Set background color */
+  height: 100vh; /* Make it cover the full screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.typing-text {
+  font-family: "Courier", monospace;
+  font-size: 48px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid black; /* Simulate cursor */
+  animation: typing 2s steps(20) forwards, blink 0.8s infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.google-signin {
+  background-color: #4285F4;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.google-signin img {
+  margin-right: 10px;
+  width: 60px;
+  height: 40px;
+}

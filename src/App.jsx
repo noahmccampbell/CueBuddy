@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import LandingPage from './pages/LandingPage'
 import Lesson1 from './pages/Lesson1'
+import Lesson2 from './pages/Lesson2'
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Login from './pages/Login'
 
@@ -12,9 +13,10 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/landing" element={<LandingPage />} />
+        <Route path="/" element={<Login/>} />
+        <Route path="/landing" element={<LandingPage/>} />
         <Route path="/lesson1" element={<Lesson1 />} />
+        <Route path="/lesson2" element={<Lesson2 />} />
       </Routes>
     </Router>
   )
