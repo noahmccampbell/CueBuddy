@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Lesson1.css";
+import { useNavigate } from "react-router-dom";
 
 const Lesson1 = () => {
   const flashcards = [
@@ -47,6 +48,7 @@ const Lesson1 = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
+  const navigate = useNavigate();
 
   const handleNextCard = () => {
     setFlipped(false);
@@ -73,6 +75,7 @@ const Lesson1 = () => {
         </div>
       </div>
       <button className="next-button" onClick={handleNextCard}>Next</button>
+      <button className="home-button" onClick={() => navigate("/landing")}>Home</button>
     </div>
   );
 };
