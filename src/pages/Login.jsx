@@ -1,22 +1,28 @@
 import React from 'react';
 
 import { useNavigate } from 'react-router-dom';
-import { fire } from '../firebase';
+import { auth, provider, signInWithPopup, signOut } from "./firebase";
+import { useDispatch } from 'react-redux';
+import { setUser } from '../redux/store';
 
 
 const Login = () => {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const handleGoogleSignIn = async () => {
-        const provider = new fire.auth.GoogleAuthProvider();
         try {
-            const auth = await fire.auth().signInWithPopup(provider);
+            const auth = await signInWithPopup(auth, provider);
+            dispatch(setUser({
+                uid: auth.user.uid
+            }))
             navigate('/landing');
              // Redirect to dashboard after successful login
         } catch (error) {
             console.error("Error signing in with Google: ", error);
         }
     };
+    
 
     return (
         <div className="flex items-center">
@@ -24,6 +30,7 @@ const Login = () => {
             <button onClick={handleGoogleSignIn}>Sign in with Google</button>
         </div>
     );
+    
 };
-
+export {handleGoogleSignIn};
 export default Login;
