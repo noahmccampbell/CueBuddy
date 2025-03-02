@@ -93,6 +93,7 @@ function Lesson2() {
             </p>
             <p className="action">{questions[currentQuestion].action}</p>
             <button className="next-btn" onClick={handleNextQuestion}>Next Question</button>
+            <button className="home-button" onClick={() => navigate("/landing")}>Home</button>
           </div>
         )}
       </div>
