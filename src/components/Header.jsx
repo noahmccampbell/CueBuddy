@@ -34,20 +34,20 @@ const Header = () => {
             <nav className="hidden md:block">
                 <ul className="flex justify-center">
                     <li>
-                        <a href="http://localhost:5173/landing">Home</a>
+                        <a href="http://localhost:5174/landing">Home</a>
                     </li>
                     <li>
-                        <a href="http://localhost:5173/">Web</a>
+                        <a href="http://localhost:5174/">Web</a>
                     </li>
                 </ul>
             </nav>
             <nav className={!toggle ? "mobile-nav left-[-50%] w-[50%] z-0" : "mobile-nav left-[0%] w-[50%] z-0"}>
                 <ul className="flex flex-col">
                     <li>
-                        <a href="http://localhost:5173/landing">Home</a>
+                        <a href="http://localhost:5174/landing">Home</a>
                     </li>
                     <li>
-                        <a href="http://localhost:5173/landing">Lessons</a>
+                        <a href="http://localhost:5174/landing">Lessons</a>
                     </li>
                     <li className="">
                         {user.username !== '' ? (
