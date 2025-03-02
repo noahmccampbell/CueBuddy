@@ -27,7 +27,6 @@ const Header = () => {
     const handleToggle = () => setToggle(!toggle);
 
     const user = useSelector((state) => state.user);
-    const navigate = useNavigate();
 
     return (
         <header className="flex justify-between px-5 py-2 nav-background text-black fixed w-full font-inconsolata border-b-2 border-darkAccentBlue shadow-md z-10">
@@ -37,10 +36,6 @@ const Header = () => {
             {user.username !== '' ? (<>
             <nav className="hidden md:block">
                 <ul className="flex justify-center items-center gap-5 p-0 m-0">
-                    <li>
-                        <button className="text-lg
-                        font-bold" onClick={() => navigate("/landing")}>Home</button>
-                    </li>
                     <li className="flex items-center gap-1">
                         <FaFireAlt size={20}/>
                         <p>Streak: {user.streak}</p>
