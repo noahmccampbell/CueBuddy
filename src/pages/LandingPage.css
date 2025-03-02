@@ -46,7 +46,7 @@ h1 {
 }
 
 .lessonTitle {
-  font-size: 3.5rem;
+  font-size: 2rem;
   color: #094381;
   text-align: center;
   font-weight: bold;
@@ -63,7 +63,7 @@ h1 {
 .next-section {
   margin-top: 150px;
   text-align: center;
-  margin-bottom: 450px;
+  margin-bottom: 310px;
   display: flex;
   justify-content: center;
   align-items: center;
