@@ -4,6 +4,7 @@ import { SlArrowDown } from "react-icons/sl";
 import "../App.css";
 import { useSelector } from "react-redux";
 import { FaFireAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 /*
 const googleSignIn = async () => {
     
@@ -26,6 +27,7 @@ const Header = () => {
     const handleToggle = () => setToggle(!toggle);
 
     const user = useSelector((state) => state.user);
+    const navigate = useNavigate();
 
     return (
         <header className="flex justify-between px-5 py-2 nav-background text-black fixed w-full font-inconsolata border-b-2 border-darkAccentBlue shadow-md z-10">
