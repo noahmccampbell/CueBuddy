@@ -2,11 +2,11 @@
 import React from 'react';
 
 import { useNavigate } from 'react-router-dom';
-import { auth, provider, signInWithPopup, signOut } from "./firebase";
+import { auth, provider} from "../firebase";
 import { useDispatch } from 'react-redux';
 import { setUser } from '../redux/store';
 
-
+import { signInWithPopup } from "firebase/auth";
 const Login = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -16,7 +16,7 @@ const Login = () => {
             const auth = await signInWithPopup(auth, provider);
             dispatch(setUser({
                 uid: auth.user.uid
-            }))
+            }));
             navigate('/landing');
              // Redirect to dashboard after successful login
         } catch (error) {
@@ -33,5 +33,5 @@ const Login = () => {
     );
     
 };
-export {handleGoogleSignIn};
+
 export default Login;
