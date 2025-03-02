@@ -4,7 +4,6 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import LandingPage from './pages/LandingPage'
 
-import Login from './pages/Login'
 import Lesson1 from './pages/Lesson1'
 
 
@@ -16,8 +15,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LandingPage/>} />
-        <Route path="log-in" element={<Login />} />
+        <Route path="/" element={<Login/>} />
+        <Route path="/landing" element={<LandingPage/>} />
+        <Route path="lesson1" element={<Lesson1 />} />
       </Routes>
     </Router>
   )
