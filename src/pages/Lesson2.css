@@ -9,7 +9,7 @@
 }
 
 h1 {
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 28px;
   margin-bottom: 20px;
 }
@@ -24,10 +24,12 @@ h1 {
 .question {
   font-size: 18px;
   font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .options {
   margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .option-btn {
@@ -67,17 +69,20 @@ h1 {
 .correct-text {
   color: #4CAF50;
   font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .incorrect-text {
   color: #E74C3C;
   font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .action {
   font-size: 16px;
   margin-top: 10px;
   font-style: italic;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .next-btn {
@@ -88,6 +93,7 @@ h1 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .next-btn:hover {
