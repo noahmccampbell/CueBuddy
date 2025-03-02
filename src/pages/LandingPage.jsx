@@ -47,9 +47,13 @@ const LandingPage = () => {
               {topic.id}
             </div>
               {index < topics.length - 1 && <div className="line"></div>}
-            </div>
+              </div>
           </Link>
-          ))}
+        ))}
+      </div>
+      <div className="daily-challenge">
+        <p>Today's Daily Challenge:</p>
+        <h1>Introduce yourself to a new person!</h1>
       </div>
     </div>
   );
