@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./quiz1.css";
+import { useNavigate } from "react-router-dom";
 
 export default function quiz1() {
 
@@ -60,6 +61,7 @@ export default function quiz1() {
         const [selectedAnswer, setSelectedAnswer] = useState(null);
         const [score, setScore] = useState(0);
         const [showResult, setShowResult] = useState(false);
+        const navigate = useNavigate();
     
         function handleAnswer(index) {
             setSelectedAnswer(index);
@@ -112,6 +114,7 @@ export default function quiz1() {
                 ) : (
                     <h2>Your Score: {score} / {questions.length}</h2>
                 )}
+                <button className="home-button" onClick={() => navigate("/landing")}>Home</button>
             </div>
         );
     }
