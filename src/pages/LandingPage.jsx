@@ -75,6 +75,10 @@ const LandingPage = () => {
           </div>
         ))}
       </div>
+      <div className="daily-challenge">
+        <p>Today's Daily Challenge:</p>
+        <h1>Introduce yourself to a new person!</h1>
+      </div>
     </div>
   );
 };

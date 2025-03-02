@@ -32,7 +32,8 @@ const Login = ({children}) => {
             } else {
                 dispatch(setUser({
                     username: (await getDoc(userRef)).data().username,
-                    level: (await getDoc(userRef)).data().level
+                    level: (await getDoc(userRef)).data().level,
+                    streak: (await getDoc(userRef)).data().streak
                 }));
                 navigate('/landing');
             }
