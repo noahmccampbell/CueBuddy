@@ -32,4 +32,3 @@ export const store = configureStore({
 
 // Export RootState and AppDispatch types
 export const getRootState = () => store.getState;
-ex
