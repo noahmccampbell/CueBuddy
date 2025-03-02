@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./LandingPage.css";
 import { useSelector } from "react-redux";
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 
 const topics = [
@@ -43,16 +42,9 @@ const LandingPage = () => {
         {topics.map((topic, index) => (
           <Link to={topic.destination}>
             <div key={topic.id} className="topic">
-<<<<<<< HEAD
-              
-              <div className="circle">
-                {topic.id}
-              </div>
-=======
               <div className="circle" onClick={() => navigate(topic.path)}>
               {topic.id}
             </div>
->>>>>>> 5a9a8d300f36e17cf01c8111242b254aeb8d0695
               {index < topics.length - 1 && <div className="line"></div>}
             </div>
           </Link>
