@@ -96,15 +96,19 @@ h1 {
   background-color: #0056b3;
 }
 
+.circle i {
+  font-size: 18px;
+  color: white;
+}
+
 .line {
   width: 100px;
   height: 7px;
   background-color: #094381;
 }
 
-
 .subtopics {
-  display: block; /* Visible when the topic is clicked */
+  display: block;
   position: absolute;
   top: 131%;
   left: 21%;

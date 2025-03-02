@@ -4,6 +4,7 @@ import { SlArrowDown } from "react-icons/sl";
 import "../App.css";
 import { useSelector } from "react-redux";
 import { FaFireAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 /*
 const googleSignIn = async () => {
     
@@ -35,10 +36,6 @@ const Header = () => {
             {user.username !== '' ? (<>
             <nav className="hidden md:block">
                 <ul className="flex justify-center items-center gap-5 p-0 m-0">
-                    <li>
-                        <button className="text-lg
-                        font-bold" onClick={() => navigate("/landing")}>Home</button>
-                    </li>
                     <li className="flex items-center gap-1">
                         <FaFireAlt size={20}/>
                         <p>Streak: {user.streak}</p>

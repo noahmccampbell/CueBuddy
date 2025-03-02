@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./LandingPage.css";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const topics = [
   {
@@ -15,10 +15,10 @@ const topics = [
       { id: "quiz", title: "Quiz", path: "/quiz1" },
     ],
   },
-  { id: 2, title: "Topic 2" , destination: "/lesson2"} ,
-  { id: 3, title: "Topic 3" },
-  { id: 4, title: "Topic 4" },
-  { id: 5, title: "Topic 5" },
+  { id: 2, title: "Topic 2" , locked: true} ,
+  { id: 3, title: "Topic 3" , locked: true,},
+  { id: 4, title: "Topic 4" , locked: true,},
+  { id: 5, title: "Topic 5" , locked: true,},
 ];
 
 const LandingPage = () => {
@@ -58,6 +58,9 @@ const LandingPage = () => {
           <div key={topic.id} className="topic">
             <div className="circle" onClick={() => handleCircleClick(topic.id)}>
               {topic.id}
+              {topic.locked && (
+                <i className="fas fa-lock" style={{ marginLeft: "5px" }}></i>
+              )}
             </div>
             {visibleSubtopics === topic.id && (
               <div className="subtopics">
