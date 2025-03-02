@@ -75,8 +75,6 @@ const Lesson1 = () => {
         </div>
       </div>
       <button className="next-button" onClick={handleNextCard}>Next</button>
-      <button className="quiz-button" onClick={() => navigate("/quiz1")}>Quiz</button>
-      <button className="home-button" onClick={() => navigate("/landing")}>Home</button>
     </div>
   );
 };

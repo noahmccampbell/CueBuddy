@@ -22,7 +22,7 @@ import Login from "./Login";
     return (
       <div className="login-container">
         <h1 className="typing-text">{displayText}</h1>
-        <p>Your companion for learning social cues and improving communication.</p>
+        <h3>Your companion for learning social cues and improving communication.</h3>
         <Login>
         <a href="#" className="google-signin">
           <img

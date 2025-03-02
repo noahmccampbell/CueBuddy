@@ -89,7 +89,7 @@ export default function quiz1() {
         return (
             <div className="quiz-container">
                 {!showResult ? (
-                    <div>
+                    <div className="items">
                         <h2>{questions[currentQuestion].question}</h2>
                         <img 
                             src={questions[currentQuestion].image} 

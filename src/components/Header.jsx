@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose} from "react-icons/ai";
+import { SlArrowDown } from "react-icons/sl";
 import "../App.css";
 import { useSelector } from "react-redux";
+import { FaFireAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 /*
 const googleSignIn = async () => {
     
@@ -32,12 +35,17 @@ const Header = () => {
             </a>
             {user.username !== '' ? (<>
             <nav className="hidden md:block">
-                <ul className="flex justify-center">
-                    <li>
-                        <a href="http://localhost:5174/landing">Home</a>
+                <ul className="flex justify-center items-center gap-5 p-0 m-0">
+                    <li className="flex items-center gap-1">
+                        <FaFireAlt size={20}/>
+                        <p>Streak: {user.streak}</p>
                     </li>
                     <li>
-                        <a href="http://localhost:5174/">Web</a>
+                        <p>Level: {user.level}</p>
+                    </li>
+                    <li className="flex items-center gap-2">
+                        <p className="text-lg font-bold text-darkAccentBlue">{user.username}</p>
+                        <SlArrowDown className="m-0 p-0"size={12}/>
                     </li>
                 </ul>
             </nav>
@@ -49,15 +57,7 @@ const Header = () => {
                     <li>
                         <a href="http://localhost:5174/landing">Lessons</a>
                     </li>
-                    <li className="">
-                        {user.username !== '' ? (
-                            <button className="sign-out px-2 font-bold" type="button">
-                                Sign Out
-                            </button>
-                        ) : (
-                            <></>
-                        )}
-                    </li>
+                
                 </ul>
             </nav>
             <button onClick={handleToggle} className="block md:hidden">

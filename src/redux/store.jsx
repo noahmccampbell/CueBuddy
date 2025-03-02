@@ -5,6 +5,8 @@ const initialUserState = {
     username: '',
     uid: '',
     level: 0,
+    streak: 0,
+
 };
 
 // User Slice
@@ -16,6 +18,7 @@ const userSlice = createSlice({
             state.username = action.payload.username;
             state.uid = action.payload.uid;
             state.level = action.payload.level;
+            state.streak = action.payload.streak;
         }
     }
 });

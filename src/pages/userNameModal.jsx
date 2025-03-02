@@ -14,10 +14,14 @@ const UsernameModal = ({ isOpen, onClose }) => {
         const user = auth.currentUser;
         if(user && username) {
             await setDoc(doc(db, "users", user.uid), {
-                username: username
+                username: username,
+                level: 1,
+                streak: 1
             }, {merge: true});
             dispatch(setUser({
-                username: username
+                username: username,
+                streak: 1,
+                level: 1
             }));
         }
         onClose();

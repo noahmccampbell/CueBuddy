@@ -46,7 +46,7 @@ h1 {
 }
 
 .lessonTitle {
-  font-size: 3.5rem;
+  font-size: 2rem;
   color: #094381;
   text-align: center;
   font-weight: bold;
@@ -58,12 +58,13 @@ h1 {
   color: #0b0c0d;
   text-align: center;
   transition: opacity 0.5s ease-in-out;
+  margin-top: 20px;
 }
 
 .next-section {
   margin-top: 150px;
   text-align: center;
-  margin-bottom: 450px;
+  margin-bottom: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,8 +96,43 @@ h1 {
   background-color: #0056b3;
 }
 
+.circle i {
+  font-size: 18px;
+  color: white;
+}
+
 .line {
   width: 100px;
   height: 7px;
   background-color: #094381;
 }
+
+.subtopics {
+  display: block;
+  position: absolute;
+  top: 131%;
+  left: 21%;
+  background-color: #f1f1f1;
+  width: 10%;
+  border: 1px solid #ccc;
+  z-index: 1;
+}
+
+.subtopic {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.subtopic:hover {
+  background-color: #ddd;
+}
+
+.daily-challenge {
+  position: absolute;
+  top: 1100px;
+  color: #094381;
+  text-align: center;
+  font-size: 1.8rem;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+ 
