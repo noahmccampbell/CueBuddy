@@ -57,7 +57,6 @@ function Lesson2() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [showAnswer, setShowAnswer] = useState(false);
-  const [quizCompleted, setQuizCompleted] = useState(false);
 
   const handleOptionClick = (index) => {
     setSelectedOption(index);
@@ -65,46 +64,38 @@ function Lesson2() {
   };
 
   const handleNextQuestion = () => {
-    if (currentQuestion === questions.length - 1) {
-      setQuizCompleted(true);
-    } else {
-      setShowAnswer(false);
-      setSelectedOption(null);
-      setCurrentQuestion((prev) => prev + 1);
-    }
+    setShowAnswer(false);
+    setSelectedOption(null);
+    setCurrentQuestion((prev) => (prev + 1) % questions.length);
   };
 
   return (
     <div className="quiz-container">
-      <h1>Reading Facial Expressions</h1>
-      {quizCompleted ? (
-        <p className="completion-message">Good job! Lesson 2 completed.</p>
-      ) : (
-        <div className="question-box">
-          <p className="question">{questions[currentQuestion].question}</p>
-          <div className="options">
-            {questions[currentQuestion].options.map((option, index) => (
-              <button
-                key={index}
-                className={`option-btn ${selectedOption === index ? (index === questions[currentQuestion].answer ? "correct" : "incorrect") : ""}`}
-                onClick={() => handleOptionClick(index)}
-                disabled={showAnswer}
-              >
-                {option}
-              </button>
-            ))}
-          </div>
-          {showAnswer && (
-            <div className="answer-box">
-              <p className={selectedOption === questions[currentQuestion].answer ? "correct-text" : "incorrect-text"}>
-                {selectedOption === questions[currentQuestion].answer ? "✅ Correct!" : "❌ Incorrect! The right answer is: " + questions[currentQuestion].options[questions[currentQuestion].answer]}
-              </p>
-              <p className="action">{questions[currentQuestion].action}</p>
-              <button className="next-btn" onClick={handleNextQuestion}>Next Question</button>
-            </div>
-          )}
+      <h1>Social Cues Quiz</h1>
+      <div className="question-box">
+        <p className="question">{questions[currentQuestion].question}</p>
+        <div className="options">
+          {questions[currentQuestion].options.map((option, index) => (
+            <button
+              key={index}
+              className={`option-btn ${selectedOption === index ? (index === questions[currentQuestion].answer ? "correct" : "incorrect") : ""}`}
+              onClick={() => handleOptionClick(index)}
+              disabled={showAnswer}
+            >
+              {option}
+            </button>
+          ))}
         </div>
-      )}
+        {showAnswer && (
+          <div className="answer-box">
+            <p className={selectedOption === questions[currentQuestion].answer ? "correct-text" : "incorrect-text"}>
+              {selectedOption === questions[currentQuestion].answer ? "✅ Correct!" : "❌ Incorrect! The right answer is: " + questions[currentQuestion].options[questions[currentQuestion].answer]}
+            </p>
+            <p className="action">{questions[currentQuestion].action}</p>
+            <button className="next-btn" onClick={handleNextQuestion}>Next Question</button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
