@@ -27,7 +27,7 @@ const Login = ({children}) => {
             }));
             const userRef = doc(db, "users", login.user.uid);
             
-            if(!(await getDoc(userRef)).exists() || username == '') {
+            if(!(await getDoc(userRef)).exists()) {
                 setIsModalOpen(true);
             } else {
                 dispatch(setUser({

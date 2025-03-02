@@ -25,7 +25,6 @@ import Login from "./Login";
         <p>Your companion for learning social cues and improving communication.</p>
         <Login>
         <a href="#" className="google-signin">
-          
           <img
             src="https://53.fs1.hubspotusercontent-na1.net/hub/53/hubfs/image8-2.jpg?width=600&name=image8-2.jpg"
             alt="Google Logo"
