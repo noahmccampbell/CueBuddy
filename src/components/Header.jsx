@@ -3,6 +3,7 @@ import { AiOutlineMenu, AiOutlineClose} from "react-icons/ai";
 import { SlArrowDown } from "react-icons/sl";
 import "../App.css";
 import { useSelector } from "react-redux";
+import { FaFireAlt } from "react-icons/fa";
 /*
 const googleSignIn = async () => {
     
@@ -33,13 +34,21 @@ const Header = () => {
             </a>
             {user.username !== '' ? (<>
             <nav className="hidden md:block">
-                <ul className="flex justify-center">
+                <ul className="flex justify-center items-center gap-5 p-0 m-0">
                     <li>
-                        <a href="http://localhost:5174/landing">Home</a>
+                        <button className="text-lg
+                        font-bold" onClick={() => navigate("/landing")}>Home</button>
                     </li>
-                    <li className="grid grid-rows-1 grid-cols-2 flex items-center gap-2">
-                        <p className="text-lg">{user.username}</p>
-                        <SlArrowDown size={12}/>
+                    <li className="flex items-center gap-1">
+                        <FaFireAlt size={20}/>
+                        <p>Streak: {user.streak}</p>
+                    </li>
+                    <li>
+                        <p>Level: {user.level}</p>
+                    </li>
+                    <li className="flex items-center gap-2">
+                        <p className="text-lg font-bold text-darkAccentBlue">{user.username}</p>
+                        <SlArrowDown className="m-0 p-0"size={12}/>
                     </li>
                 </ul>
             </nav>
@@ -51,15 +60,7 @@ const Header = () => {
                     <li>
                         <a href="http://localhost:5174/landing">Lessons</a>
                     </li>
-                    <li className="">
-                        {user.username !== '' ? (
-                            <button className="sign-out px-2 font-bold" type="button">
-                                Sign Out
-                            </button>
-                        ) : (
-                            <></>
-                        )}
-                    </li>
+                
                 </ul>
             </nav>
             <button onClick={handleToggle} className="block md:hidden">
